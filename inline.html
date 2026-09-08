@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Cara 1: JavaScript Inline</title>
+</head>
+<body>
+
+    <h1>JavaScript Inline</h1>
+    <p>JavaScript ditulis langsung di dalam atribut HTML (onclick, onmouseover, dll)</p>
+    <p><b>Catatan:</b> Buka Console browser (F12 → tab Console) untuk melihat output terminal.</p>
+
+    <h2>Contoh 1: Tombol Alert</h2>
+    <button onclick="alert('Halo! Ini adalah JavaScript Inline!'); console.log('Tombol alert diklik!');">Klik Saya</button>
+
+    <h2>Contoh 2: Menampilkan Teks</h2>
+    <p id="pesan">Teks akan berubah jika kamu klik tombol di bawah</p>
+    <button onclick="document.getElementById('pesan').innerHTML = 'Teks sudah berubah!'; console.log('Teks berhasil diubah!');">Ubah Teks</button>
+
+    <h2>Contoh 3: Menghitung Angka</h2>
+    <input type="number" id="angka1" placeholder="Angka 1">
+    <input type="number" id="angka2" placeholder="Angka 2">
+    <button onclick="hitung()">Tambah</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitung() {
+            var a = document.getElementById('angka1').value;
+            var b = document.getElementById('angka2').value;
+            var total = Number(a) + Number(b);
+            console.log('Angka 1:', a);
+            console.log('Angka 2:', b);
+            console.log('Hasil penjumlahan:', total);
+            document.getElementById('hasil').innerHTML = 'Hasil: ' + a + ' + ' + b + ' = ' + total;
+        }
+    </script>
+
+</body>
+</html>

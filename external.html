@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara 3: JavaScript External</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>JavaScript External</h1>
+    <p>JavaScript ditulis di file terpisah (<code>script.js</code>) dan dipanggil dengan atribut <code>src</code></p>
+    <p><b>Catatan:</b> Buka Console browser (F12 → tab Console) untuk melihat output terminal.</p>
+
+    <h2>Contoh 1: Pesan dari File Eksternal</h2>
+    <button onclick="sapaEksternal()">Tampilkan Pesan</button>
+    <p id="pesanEksternal"></p>
+
+    <h2>Contoh 2: Tampilkan Tanggal Hari Ini</h2>
+    <button onclick="tampilkanTanggal()">Lihat Tanggal</button>
+    <p id="tanggalHari"></p>
+
+    <h2>Contoh 3: Tampilkan Waktu Sekarang</h2>
+    <button onclick="tampilkanWaktu()">Lihat Waktu</button>
+    <p id="waktuSekarang"></p>
+
+    <h2>Contoh 4: Kalkulator Sederhana</h2>
+    <input type="number" id="kalkA" placeholder="Angka 1">
+    <select id="kalkOp">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">:</option>
+    </select>
+    <input type="number" id="kalkB" placeholder="Angka 2">
+    <button onclick="kalkulatorSederhana()">Hitung</button>
+    <p id="hasilKalk"></p>
+
+</body>
+</html>

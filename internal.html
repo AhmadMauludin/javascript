@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara 2: JavaScript Internal</title>
+    <script>
+        // JavaScript ditulis di dalam tag <script> pada bagian <head> atau <body>
+
+        function sapa() {
+            console.log('Fungsi sapa() dipanggil');
+            document.getElementById('sapaian').innerHTML = 'Selamat pagi! Selamat datang di kelas Pemrograman Web.';
+        }
+
+        function gantiWarnaTeks() {
+            var warna = document.getElementById('pilihanWarna').value;
+            console.log('Warna dipilih:', warna);
+            document.getElementById('teksWarna').style.color = warna;
+        }
+
+        function balikTeks() {
+            var teks = document.getElementById('inputTeks').value;
+            var teksBalik = teks.split('').reverse().join('');
+            console.log('Teks asli:', teks);
+            console.log('Teks balik:', teksBalik);
+            document.getElementById('hasilBalik').innerHTML = 'Teks asli: ' + teks + '<br>Teks balik: ' + teksBalik;
+        }
+
+        function cekGanjilGenap() {
+            var angka = Number(document.getElementById('angkaGJ').value);
+            console.log('Angka yang dicek:', angka);
+            var hasil = '';
+            if (angka % 2 === 0) {
+                hasil = angka + ' adalah bilangan GENAP';
+                console.log('Hasil: GENAP');
+            } else {
+                hasil = angka + ' adalah bilangan GANJIL';
+                console.log('Hasil: GANJIL');
+            }
+            document.getElementById('hasilGJ').innerHTML = hasil;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>JavaScript Internal</h1>
+    <p>JavaScript ditulis di dalam tag <code>&lt;script&gt;</code> di file HTML yang sama</p>
+    <p><b>Catatan:</b> Buka Console browser (F12 → tab Console) untuk melihat output terminal.</p>
+
+    <h2>Contoh 1: Fungsi Sapa</h2>
+    <button onclick="sapa()">Sapa Saya</button>
+    <p id="sapaian"></p>
+
+    <h2>Contoh 2: Ganti Warna Teks</h2>
+    <select id="pilihanWarna">
+        <option value="red">Merah</option>
+        <option value="blue">Biru</option>
+        <option value="green">Hijau</option>
+        <option value="orange">Oranye</option>
+    </select>
+    <button onclick="gantiWarnaTeks()">Terapkan</button>
+    <p id="teksWarna">Teks ini akan berubah warnanya!</p>
+
+    <h2>Contoh 3: Balikkan Teks</h2>
+    <input type="text" id="inputTeks" placeholder="Ketik teks di sini">
+    <button onclick="balikTeks()">Balikkan</button>
+    <p id="hasilBalik"></p>
+
+    <h2>Contoh 4: Cek Ganjil/Genap</h2>
+    <input type="number" id="angkaGJ" placeholder="Masukkan angka">
+    <button onclick="cekGanjilGenap()">Cek</button>
+    <p id="hasilGJ"></p>
+
+</body>
+</html>
