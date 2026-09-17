@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Praktikum JavaScript</title>
+  </head>
+  <body>
+    <h1>Praktikum JavaScript</h1>
+    <h3>Operator</h3>
+
+    <script>
+      document.write("<h2>3. Operator Aritmatika</h2>");
+      let a = 12,
+        b = 5;
+      document.write("a = " + a + ", b = " + b + "<br>");
+      document.write("a + b = " + (a + b) + "<br>");
+      document.write("a - b = " + (a - b) + "<br>");
+      document.write("a * b = " + a * b + "<br>");
+      document.write("a / b = " + a / b + "<br>");
+      document.write("a % b = " + (a % b) + "<br>");
+      document.write("a ** 2 = " + a ** 2 + "<br><br>");
+
+      document.write("<h2>4. Operator Perbandingan</h2>");
+      let x = 10,
+        y = "10";
+      document.write("x == y → " + (x == y) + "<br>");
+      document.write("x === y → " + (x === y) + "<br>");
+      document.write("x != y → " + (x != y) + "<br>");
+      document.write("x !== y → " + (x !== y) + "<br>");
+      document.write("x > 5 → " + (x > 5) + "<br>");
+      document.write("x <= 10 → " + (x <= 10) + "<br><br>");
+
+      document.write("<h2>5. Operator Logika</h2>");
+      let nilai = 85,
+        absen = 90;
+      document.write("Nilai = " + nilai + ", Absen = " + absen + "<br>");
+      document.write("Lulus? (&&) → " + (nilai >= 75 && absen >= 80) + "<br>");
+      document.write("Bonus? (||) → " + (nilai >= 90 || absen >= 95) + "<br>");
+      document.write("Tidak lulus? (!) → " + !(nilai >= 75) + "<br><br>");
+
+      document.write("<h2>6. Operator Ternary</h2>");
+      let usia = 16;
+      let status = usia >= 17 ? "Dewasa" : "Belum Dewasa";
+      document.write("Usia = " + usia + "<br>");
+      document.write("Status: " + status + "<br>");
+    </script>
+  </body>
+</html>
